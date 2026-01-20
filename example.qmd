@@ -4,6 +4,6 @@ title: "Olav-test Example"
 
 ## Heading
 
-{{< olav-test >}}
+{{< olav-test my-key >}}
 
 

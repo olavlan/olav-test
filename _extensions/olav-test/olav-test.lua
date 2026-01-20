@@ -1,7 +1,8 @@
 return {
-  ['olav-test'] = function(args, kwargs, meta, raw_args, context) 
+  ['olav-test'] = function(args, kwargs, meta, raw_args, context)
     -- see https://quarto.org/docs/extensions/shortcodes.html
     -- for documentation on shortcode development
-    return pandoc.Str("Hello from Olav-test!")
+    local key = pandoc.utils.stringify(args[1])
+    return pandoc.Div("", pandoc.Attr(key, { 'olav-test' }))
   end
 }
